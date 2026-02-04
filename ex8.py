@@ -3,11 +3,9 @@ def send_motor_command(rpm: float, motor_id: int = 0) -> tuple[int, float]:
     if rpm > 1000:
         raise ValueError(f"Safety Limit Exceeded: {rpm} RPM is too high!")
     
-    # Simulate sending to hardware
     return (motor_id, rpm)
 
-# Testing the implementation
-commands_to_test = [500, 1200]
+commands_to_test = [500, 1200,1000,100,1500]
 
 for cmd in commands_to_test:
     try:

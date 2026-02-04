@@ -9,8 +9,13 @@ while True:
         print("Low Battery!")
         break
 for reading in voltage:
-    if reading>12:
+    if reading>12.0:
         continue
-    if reading<11:
+    if reading<11.0:
         break
+    print(reading)
+print ("Filter Readings ")
+for reading in voltage:
+    if v>12.0:continue
+    if v<11.0:break
     print(reading)
